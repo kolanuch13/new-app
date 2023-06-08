@@ -31,8 +31,7 @@ a {
 
 header {
   display: flex;
-  margin-top: 16px;
-  margin-left: 16px;
+  margin: 16px;
   font-weight: 700;
 }
 
@@ -50,4 +49,10 @@ footer>a {
 
 footer > a:hover {
   color: red;
+}
+
+@media screen and (min-width: 780px) {
+  header {
+    position: absolute;
+  }
 }

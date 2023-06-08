@@ -1,10 +1,5 @@
 export const galleryItems = [
   {
-    preview: "./assets/apartment-1.jpg",
-    original: "./assets/apartment-1.jpg",
-    description: "Spacious apartment with stunning city views.",
-  },
-  {
     preview: "./assets/apartment-2.jpg",
     original: "./assets/apartment-2.jpg",
     description: "Cozy apartment in a quiet neighborhood.",
@@ -93,10 +88,5 @@ export const galleryItems = [
     preview: './assets/apartment-19.jpg',
     original: './assets/apartment-19.jpg',
     description: 'Chic apartment with a rooftop terrace.',
-  },
-  {
-    preview: "./assets/apartment-20.jpg",
-    original: "./assets/apartment-20.jpg",
-    description: "Contemporary loft-style apartment with an open floor plan.",
   },
 ];

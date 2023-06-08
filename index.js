@@ -2,12 +2,7 @@ import { galleryItems } from "./gallery-items.js";
 
 const galleryPlace = document.querySelector(".gallery");
 
-galleryPlace.innerHTML = createMarkup(galleryItems);
-
-let lightbox = new SimpleLightbox(".gallery a", { fadeSpeed: 250 });
-
-function createMarkup(array) {
-  const markup = array
+  const markup = galleryItems
     .map((item) => {
       return `
           <li class="gallery__item">
@@ -18,5 +13,10 @@ function createMarkup(array) {
           `;
     })
     .join("");
-  return markup;
-}
+
+
+galleryPlace.insertAdjacentHTML("beforeend", markup);
+
+let lightbox = new SimpleLightbox(".gallery a", { fadeSpeed: 250 });
+
+
