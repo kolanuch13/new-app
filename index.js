@@ -10,7 +10,11 @@ function createMarkup(array) {
   const markup = array
     .map((item) => {
       return `
-          <li><a href="${item.original}"> <img class="gallery__image" src="${item.preview}" alt="${item.description}" title="${item.description}"/></a></li>
+          <li class="gallery__item">
+            <a href="${item.original}"> 
+              <img class="gallery__image" src="${item.preview}" alt="${item.description}" title="${item.description}"/>
+            </a>
+          </li>
           `;
     })
     .join("");
