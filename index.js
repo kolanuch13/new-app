@@ -7,7 +7,7 @@ const galleryPlace = document.querySelector(".gallery");
       return `
           <li class="gallery__item">
             <a href="${item.original}"> 
-              <img class="gallery__image" src="${item.preview}" alt="${item.description}" title="${item.description}"/>
+              <img class="gallery__image" src="${item.preview}" alt="${item.description}"/>
             </a>
           </li>
           `;
@@ -17,6 +17,10 @@ const galleryPlace = document.querySelector(".gallery");
 
 galleryPlace.insertAdjacentHTML("beforeend", markup);
 
-let lightbox = new SimpleLightbox(".gallery a", { fadeSpeed: 250 });
+let lightbox = new SimpleLightbox(".gallery a", {
+  fadeSpeed: 250,
+  doubleTapZoom: 2,
+  showCounter: false,
+});
 
 
