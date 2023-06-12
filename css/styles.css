@@ -24,6 +24,10 @@
     transition: transform var(--animation-duration) var(--timing-function);
   }
 
+  .gallery__image--first {
+    width: 100vw;
+  }
+
   .gallery__item:hover {
     transform: scale(1.03);
   }
@@ -52,6 +56,10 @@
       list-style: none;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .gallery__image {
+      width: 100vw;
     }
   }
 }
