@@ -1,5 +1,3 @@
-@media(hover: hover) and (pointer: fine) {
-
   :root {
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --animation-duration: 250ms;
@@ -9,9 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
     list-style: none;
-    margin: 0;
   }
 
   .gallery__list {
@@ -21,6 +17,9 @@
   }
 
   .gallery__item {
+    display: block;
+    width: 100%;
+    height: 100%;
     transition: transform var(--animation-duration) var(--timing-function);
   }
 
@@ -28,18 +27,20 @@
     width: 100vw;
   }
 
-  .gallery__item:hover {
-    transform: scale(1.03);
-  }
-
   .gallery__image {
-    width: 100%;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   .gallery__link {
-    display: block;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
+  }
+
+  .gallery__item:hover {
+    transform: scale(1.03);
   }
 
   .gallery__link:hover {
@@ -57,9 +58,4 @@
       margin-left: auto;
       margin-right: auto;
     }
-
-    .gallery__image {
-      width: 100vw;
-    }
   }
-}
