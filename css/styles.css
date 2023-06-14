@@ -1,36 +1,52 @@
   :root {
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --animation-duration: 250ms;
+    --animation-duration: 500ms;
+  }
+
+  .header__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .header__container > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
 
   .gallery {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
-  }
-
-  .gallery__list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 80vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 50px;
+    background-color: white;
+    z-index: 2;
   }
 
   .gallery__item {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: calc((100vw / 3) - 70px);
+    height: calc((100vh / 2) - 10px);
     transition: transform var(--animation-duration) var(--timing-function);
   }
 
   .gallery__image--first {
     width: 100vw;
-  }
-
-  .gallery__image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    height: 80vh;
+    background-image: url(../assets/int-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 
   .gallery__link {
@@ -39,15 +55,34 @@
     text-decoration: none;
   }
 
+  .gallery__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gallery__item--description {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
   .gallery__item:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
+  }
+
+  .gallery__item:hover .gallery__item--description {
+    opacity: 100;
   }
 
   .gallery__link:hover {
     cursor: zoom-in;
   }
 
-  @media screen and (min-width: 780px) {
+  .about__section {
+    margin: 20px 85px;
+  }
+
+  /* @media screen and (min-width: 780px) {
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
@@ -58,4 +93,4 @@
       margin-left: auto;
       margin-right: auto;
     }
-  }
+  } */

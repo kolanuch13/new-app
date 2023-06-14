@@ -6,9 +6,12 @@ const galleryPlace = document.querySelector(".gallery");
     .map((item) => {
       return `
           <li class="gallery__item">
-            <a class="gallery__link" href="${item.original}"> 
-              <img class="gallery__image" src="${item.preview}" alt="${item.description}"/>
-            </a>
+            <figure>
+              <a class="gallery__link" href="${item.original}">
+                <img class="gallery__image" src="${item.preview}" alt="${item.description}"/>
+              </a>
+              <figcapture class="gallery__item--description">${item.description}</figcapture>
+            </figure>
           </li>
           `;
     })
