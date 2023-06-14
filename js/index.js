@@ -1,78 +1,29 @@
-import { archItems, houseItems, interiorItems, kitchenItems } from "./gallery-items.js";
+import { galleryItems } from "./gallery-items.js";
 
-const galleryArch = document.querySelector("#arch");
-const galleryHouse = document.querySelector("#house");
-const galleryInt = document.querySelector("#int");
-const galleryKitchen = document.querySelector("#kitchen");
+const galleryPlace = document.querySelector(".gallery");
+
+  const markup = galleryItems
+    .map((item) => {
+      return `
+          <li class="gallery__item">
+            <figure>
+              <a class="gallery__link" href="${item.original}">
+                <img class="gallery__image" src="${item.preview}" alt="${item.description}"/>
+              </a>
+              <figcapture class="gallery__item--description">${item.description}</figcapture>
+            </figure>
+          </li>
+          `;
+    })
+    .join("");
 
 
-const markupElement = (preview, original, description) => {
-  return `
-    <li class="item__card">
-      <a href="${original}">
-        <img src="${preview}" alt="${description}" class="item__image">
-      </a>
-    </li>
-  `;
-}
+galleryPlace.insertAdjacentHTML("beforeend", markup);
 
-const archMarkup = archItems
-  .map((item) => {
-    return markupElement(item.preview, item.original, item.description)
-  })
-  .join("");
-
-const houseMarkup = houseItems
-  .map((item) => {
-    return markupElement(item.preview, item.original, item.description);
-  })
-  .join("");
-
-const intMarkup = interiorItems
-  .map((item) => {
-    return markupElement(item.preview, item.original, item.description);
-  })
-  .join("");
-
-const kitchenMarkup = kitchenItems
-  .map((item) => {
-    return markupElement(item.preview, item.original, item.description);
-  })
-  .join("");
-
-galleryArch.insertAdjacentHTML("beforeend", archMarkup);
-galleryHouse.insertAdjacentHTML("beforeend", houseMarkup);
-galleryInt.insertAdjacentHTML("beforeend", intMarkup);
-galleryKitchen.insertAdjacentHTML("beforeend", kitchenMarkup);
-
-let lightbox = new SimpleLightbox(".item__card a", {
+let lightbox = new SimpleLightbox(".gallery a", {
   fadeSpeed: 250,
   doubleTapZoom: 2,
   showCounter: false,
 });
 
-// =====================================================================
-// let lightbox = new SimpleLightbox(".gallery a", {
-//   fadeSpeed: 250,
-//   doubleTapZoom: 2,
-//   showCounter: false,
-// });
 
-// return `
-// <li class="gallery__item">
-//     <ul class="item__list">
-//       <li class="item__card">
-//         <img src="${item[0].preview}" alt="${item[0].description}" class="item__image">
-//       </li>
-//       <li class="item__card">
-//         <img src="${item[1].preview}" alt="${item[1].description}" class="item__image">
-//       </li>
-//       <li class="item__card">
-//         <img src="${item[2].preview}" alt="${item[2].description}" class="item__image">
-//       </li>
-//       <li class="item__card">
-//         <img src="${item[3].preview}" alt="${item[3].description}" class="item__image">
-//       </li>
-//     </ul>
-// </li>
-// `;
