@@ -16,12 +16,16 @@
     font-weight: 400;
   }
 
+  .header__logo--image {
+    height: 30px;
+  }
+
   .header__logo:hover {
     animation: animationLogo 1500ms ease-in-out 0.5s;
   }
 
   .gallery__section {
-    margin-top: 80vh;
+    margin-top: 70vh;
     padding: 50px 20px;
     background-color: white;
   }
