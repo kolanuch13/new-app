@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  cursor: none;
 }
 
 body {
@@ -19,7 +20,6 @@ input {
 
 button {
   padding: 8px 12px;
-  cursor: pointer;
 }
 
 a {
@@ -52,10 +52,6 @@ footer {
 
 footer>a {
   transition: color 1s;
-}
-
-footer > a:hover {
-  color: red;
 }
 
 ul {

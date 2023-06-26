@@ -1,6 +1,6 @@
   :root {
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --animation-duration: 500ms;
+    --animation-duration: 750ms;
     --image-width: calc((100vw / 3) - 55px);
   }
 
@@ -85,7 +85,11 @@
   }
 
   .gallery__image:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+
+  .gallery__image:hover .cursor {
+      border: 2px solid red;
   }
 
   .gallery__item:hover .gallery__item--description {
@@ -93,11 +97,8 @@
   }
 
   .about__section {
-    margin: 16px;
-  }
-
-  .about__section {
-    margin: 20px 85px;
+    padding: 20px 85px;
+    background-color: white;
   }
 
   @keyframes animationLogo {
