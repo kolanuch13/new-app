@@ -48,7 +48,9 @@
     display: block;
     width: var(--image-width);
     height: var(--image-width);
-    transition: transform var(--animation-duration) var(--timing-function);
+    -webkit-mask-image: linear-gradient(black, white);
+    mask-image: linear-gradient (black, white);
+    /* transition: transform var(--animation-duration) var(--timing-function); */
   }
 
   .gallery__image--first {
@@ -73,7 +75,8 @@
   .gallery__image {
     object-fit: cover;
     width: 100%;
-    height: auto
+    height: auto;
+    transition: transform var(--animation-duration) var(--timing-function);
   }
 
   .gallery__item--description {
@@ -81,9 +84,8 @@
     transition: opacity var(--animation-duration) var(--timing-function);
   }
 
-  .gallery__item:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px rgb(177, 177, 177);
+  .gallery__image:hover {
+    transform: scale(1.2);
   }
 
   .gallery__item:hover .gallery__item--description {
