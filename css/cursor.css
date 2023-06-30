@@ -3,10 +3,10 @@
   position:absolute;
   top: 0;
   left: 0;
-  width: 6px;
-  height: 6px;
-  border: 2px solid #000;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
+  background-color: rgba(232, 232, 232, 0.9);
   z-index: 1000;
   transition: transform 100ms cubic-bezier(.17, .67, .91, .53);
 }

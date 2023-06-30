@@ -1,4 +1,5 @@
 const cursor = document.querySelector(".cursor");
+const body = document.querySelector("body");
 
 const positionElement = (e) => {
   const mouseY = e.pageY;
@@ -8,7 +9,6 @@ const positionElement = (e) => {
 };
 
 const scrollElement = (e) => {
-  console.log(e);
   const mouseY = e.pageY;
   const mouseX = e.pageX;
 
