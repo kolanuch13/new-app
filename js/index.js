@@ -9,7 +9,7 @@ const markup = galleryItems
         <figure>
           <a class="gallery__link" href="${item.jpgFull}">
             <div class="blurred-img" style="background-image: url(${item.small})">
-              <picture class="gallery__image">
+              <picture >
                 <source srcset="${item.webp} 1x, ${item.webpFull} 2x" type="image/webp" />
                 <source srcset="${item.jpg} 1x, ${item.jpgFull} 2x" type="image/jpeg" />
                 <img class="gallery__image" src="${item.jpg}" title="${item.description}" loading="laizy"/>

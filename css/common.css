@@ -40,11 +40,12 @@ header {
   padding-right: 50px;
   font-weight: 700;
   width: 100vw;
+  border-bottom: 1px solid black;
 }
 
 footer {
   display: flex;
-  padding: 16px;
+  padding: 16px var(--sections-padding);
   font-weight: 700;
   color: white;
   background-color: black;
@@ -70,4 +71,12 @@ figure {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (max-width: 420px) {
+  footer {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+  }
 }
