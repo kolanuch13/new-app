@@ -92,11 +92,13 @@
     transition: opacity var(--animation-duration) var(--timing-function);
   }
 
-  .gallery__image:hover{
+  .gallery__image:hover,
+  .gallery__image:active {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
     /* transform: scale(1.1); */
   }
+
 
   .about__section {
     margin-top: 70vh;
