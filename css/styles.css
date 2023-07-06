@@ -16,9 +16,11 @@
     font-size: 12px;
     font-weight: 400;
     border-bottom: 1px solid white;
+    transition: border-bottom var(--animation-duration) var(--timing-function);
   }
 
-  .header__link:hover {
+  .header__link:hover,
+  .header__link:focus {
     border-bottom: 1px solid black;
   }
 
@@ -26,7 +28,8 @@
     height: 30px;
   }
 
-  .header__logo:hover {
+  .header__logo:hover
+  .header__logo:focus {
     animation: animationLogo 1500ms ease-in-out 0.5s;
   }
 
@@ -93,10 +96,10 @@
   }
 
   .gallery__image:hover,
+  .gallery__image:focus,
   .gallery__image:active {
     -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-    /* transform: scale(1.1); */
+    filter: grayscale(0%);        
   }
 
 

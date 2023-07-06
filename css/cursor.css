@@ -10,3 +10,9 @@
   z-index: 1000;
   transition: transform 100ms cubic-bezier(.17, .67, .91, .53);
 }
+
+@media screen and (max-width: 420px) {
+  .cursor {
+    display: none;
+  }
+}
